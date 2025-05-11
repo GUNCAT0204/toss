@@ -1,0 +1,25 @@
+//display 및 posion 스타일
+
+//flex item center
+@mixin flexCenter() {
+    display: flex;
+    align-items: center;
+}
+
+//fixed
+@mixin fixed($top, $left, $right, $bottom) {
+    position: fixed;
+    top: $top;
+    left: $left;
+    right: $right;
+    bottom: $bottom;
+}
+
+//sticky
+@mixin sticky($top, $left, $right, $bottom) {
+    position: sticky;
+    top: $top;
+    left: $left;
+    right: $right;
+    bottom: $bottom;
+}

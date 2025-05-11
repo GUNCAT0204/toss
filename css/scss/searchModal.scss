@@ -1,0 +1,61 @@
+//search modal 스타일
+
+//다른 scss 파일의 함수 사용
+@use "display" as *;
+@use "spacing" as *;
+@use "tagStyle" as *;
+
+#modal-container-1 {
+    @include noDrag();
+    @include fixed(0, 0,auto, auto);
+    transform: translateX(calc(-50% + 541.994px)) translateY(11px);
+    width: 640px;
+    padding: 0;
+    border-radius: 20px;
+    max-height: 600px;
+    background-color: var(--adaptiveFloatBackground);
+    flex-direction: column;
+    border: 1px solid red;
+}
+
+.modal {
+    &-search {
+        &-1 {
+            @include size(calc(100% - 24px), 40px);
+            @include marginAll(12px, 12px, 16px, 12px);
+            min-height: 40px;
+            background-color: var(--adaptiveGreyOpacity100);
+            border-radius: 50px;
+        }
+    }
+
+    &-icon {
+        &-1 {
+            @include sizeEqual(16px);
+            display: inline-block;
+            min-width: 16px;
+            margin-left: 12px;
+            line-height: 0;
+        }
+
+        &-2 {
+            @include sizeFull();
+        }
+    }
+}
+
+.input-search-1 {
+    @include sizeFull();
+    @include paddingAll(0, 30px, 0, 10px);
+    display: block;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 14px;
+    color: var(--adaptiveGrey900);
+    cursor: text;
+}
+
+#modal-container-1, .modal-search-1 {
+    @include flexCenter();
+}

@@ -1,0 +1,27 @@
+//padding 또는 margin
+
+//margin, padding 0
+@mixin zeroSpacing() {
+    margin: 0;
+    padding: 0;
+}
+
+//모든 padding 조절
+@mixin paddingAll($top, $right, $bottom, $left) {
+    padding: $top $right $bottom $left;
+}
+
+//padding 하나만 입력
+@mixin paddingOne($result) {
+    padding: $result;
+}
+
+//모든 margin 조절
+@mixin marginAll($top, $right, $bottom, $left) {
+    margin: $top $right $bottom $left;
+}
+
+//margin 하나만 입력
+@mixin marginOne($result) {
+    margin: $result;
+}

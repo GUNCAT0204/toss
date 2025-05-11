@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="kor">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>토스증권</title>
+    <link rel="icon" href="https://static.toss.im/tds/favicon/favicon.ico">
+
+    <link rel="stylesheet" href="../css/default.css">
+    <link rel="stylesheet" href="../css/color.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    </haed>
+<body data-theme="light">
+    <!-- nav 바깥쪽 -->
+    <div id="nav-container-1" title="메뉴 바">
+        <!-- nav -->
+        <nav class="nav-container-2" title="메뉴 바">
+            <!-- nav 왼쪽 토스증권 사진 -->
+            <div class="icon-container-1" title="home icon 위치">
+                <a class="icon-menu-1" href="http://192.168.45.136:5501/toss/html/nav.html" title="home으로 이동">
+                    <img src="https://static.toss.im/png-icons/securities/logo_securities_mono_black_korean_300.png" id="nav-img"
+                        alt="토스증권">
+                </a>
+            </div>
+            <!-- nav 가운데 메뉴바 -->
+            <div class="nav-main-1" title="가운데 메뉴 container">
+                <!-- 메뉴 이동 -->
+                <ul class="ul-menu-1" title="메인 메뉴 container">
+                    <li class="li-menu-1 li-menu-2" title="홈으로 이동하는 메뉴">
+                        <a class="li-menu-3" href="http://192.168.45.136:5501/toss/html/nav.html" title="홈">
+                            홈
+                        </a>
+                    </li>
+                    <li class="li-menu-2" title="뉴스로 이동하는 메뉴">
+                        <a class="li-menu-3" href="http://192.168.45.136:5501/toss/html/nav.html" title="뉴스">
+                            뉴스
+                        </a>
+                    </li>
+                    <li class="li-menu-2" title="주식 골라보기로 이동하는 메뉴">
+                        <a class="li-menu-3" href="http://192.168.45.136:5501/toss/html/nav.html" title="주식 골라보기">
+                            주식 골라보기
+                        </a>
+                    </li>
+                    <li class="li-menu-2" title="내 계좌로 이동하는 메뉴">
+                        <a class="li-menu-3" href="http://192.168.45.136:5501/toss/html/nav.html" title="내 계좌">
+                            내 계좌
+                        </a>
+                    </li>
+                </ul>
+                <!-- 검색 메뉴 -->
+                <button class="btn-search-1" title="검색 메뉴바">
+                    <!-- 검색 아이콘 -->
+                    <span class="icon-container-2" title="검색 아이콘 container">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" title="검색 아이콘">
+                            <g fill="none" stroke="#b0b8c1" stroke-linecap="round" stroke-miterlimit="10"
+                                stroke-width="2.4">
+                                <circle cx="10.313" cy="10.388" r="7.395"></circle>
+                                <path d="m15.564 15.638 5.517 5.517">
+                                </path>
+                            </g>
+                        </svg>
+                    </span>
+                    <!-- 검색 문구 아이콘 -->
+                    <div class="icon-container-3" title="검색 문구 아이콘 container">
+                        <span title="검색 문구 아이콘">
+                            /
+                        </span>
+                    </div>
+                    <!-- 검색 문구 -->
+                    <span class="text-search-1" title="검색 문구">
+                        를 눌러 검색하세요
+                    </span>
+                </button>
+            </div>
+            <!-- nav 오른쪽 로그인 메뉴 -->
+            <div class="nav-login-1" title="로그인 container">
+                <div class="btn-login-1" title="로그인 안쪽 container">
+                    <a class="btn-login-2">
+                        로그인
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+</body>
+<script>
+    $(window).on('load', function() {
+        const attr = $("body").attr("data-theme");
+        if(attr == 'dark') {
+            $('#nav-img').attr('src', 'https://static.toss.im/png-icons/securities/logo_securities_mono_white_korean_300.png')
+        }
+    })
+</script>
+</html>

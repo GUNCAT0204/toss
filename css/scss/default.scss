@@ -1,0 +1,68 @@
+//기본 스타일 (필수)
+
+//다른 scss 파일의 함수 사용
+@use "display" as *;
+@use "spacing" as *;
+@use "tagStyle" as *;
+@use "spacing" as *;
+
+html {
+    min-width: 1156px;
+}
+
+body {
+    overflow-y: scroll;
+    right: 0;
+    background-color: var(--adaptiveBackground);
+    overscroll-behavior-y: none;
+    margin: 0;
+    color: var(--adaptiveGrey700);
+    min-height: 100vh;
+}
+
+* {
+    box-sizing: border-box;
+    scrollbar-width: thin;
+}
+
+a {
+    text-decoration: none;
+}
+
+li, ul, ol {
+    list-style: none;
+    @include zeroSpacing();
+}
+
+a, li, ul, ol {
+    color: inherit;
+}
+
+button {
+    @include borderStyle(none, 0);
+    background: none;
+    text-align: left;
+    cursor: pointer;
+}
+
+button, select {
+    text-transform: none;
+}
+
+button, input {
+    overflow: visible;
+}
+
+button, input, optgroup, select, textarea {
+    @include fontStyle(normal, inherit, 1.15, 100%);
+    @include zeroSpacing();
+    font-family: inherit;
+}
+
+//nav 들어가는 부분
+#nav-container-1 {
+    @include size(100%, 60px);
+    @include sticky(0, auto, auto, auto);
+    z-index: 10001;
+}
+

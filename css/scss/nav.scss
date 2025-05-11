@@ -1,0 +1,135 @@
+//nav 전용 스타일
+
+//다른 scss 파일의 함수 사용
+@use "display" as *;
+@use "spacing" as *;
+@use "tagStyle" as *;
+
+//메뉴바 container
+.nav-container {
+    &-2 {
+        @include paddingAll(0px, 36px, 0px, 20px);
+        justify-content: space-between;
+    }
+}
+
+//icon 관련 스타일
+.icon{
+    &-container {
+        &-2 {
+            @include sizeEqual(16px);
+            @include marginAll(auto, 12px, auto, 16px);
+            min-width: 16px;
+            isolation: isolate;
+        }
+
+        &-3 {
+            @include sizeEqual(20px);
+            @include borderStyle(1px solid var(--adaptiveGreyOpacity200), 4px);
+            justify-content: center;
+            background-color: var(--adaptiveGreyOpacity50);
+            margin-right: 4px;
+        }
+    }
+
+    &-main {
+        &-1 {
+            height: 40px;
+        }
+    }
+}
+
+//icon 이미지
+#nav-img {
+    @include size(auto, 20px);
+    color: transparent;
+}
+
+//메인 메뉴 container
+.ul-menu-1 {
+    gap: 10px;
+}
+
+//menu list
+.li-menu {
+    &-2 {
+        @include fontStyle(500, var(--adaptiveGrey600), 1.45, 15px);
+    }
+
+    &-3 {
+        @include paddingOne(10px);
+    }
+
+    &-1 {
+        color: var(--adaptiveGrey800);
+        font-weight: 700;
+    }
+}
+
+//search btn
+.btn-search-1 {
+    @include size(212px, 38px);
+    background-color: var(--adaptiveGreyOpacity100);
+    border-radius: 38px;
+    margin-left: 16px;
+}
+
+//검색어 입력 아이콘 기호
+.icon-container-3 span {
+    @include fontStyle(bold, var(--adaptiveGrey500), 1.45, 12px);
+}
+
+//검색어 문구
+.text-search-1 {
+    @include fontStyle(500, var(--adaptiveGrey500), 1.45, 15px);
+}
+
+//로그인 컨테이너
+.nav-login-1 {
+    justify-content: flex-end;
+}
+
+//로그인 버튼
+.btn-login {
+    &-1 {
+        gap: 16px;
+    }
+
+    &-2 {
+        @include fontStyle(600, #fff, 16px, 14px);
+        @include paddingAll(6px, 12px, 6px, 12px);
+        @include minSize(16px, 32px);
+        @include borderStyle(none, 8px);
+        @include noDrag();
+        @include noDefaultStyle();
+        background-color: var(--adaptiveBlue500);
+        cursor: pointer;
+        transition: background-color .2s ease, color .1s ease;
+    }
+}
+
+//로그인 버튼 hover
+.btn-login-2:hover {
+    background-color: var(--adaptiveBlue600);
+}
+
+//width 120px
+.icon-container-1, .nav-login-1 {
+    width: 120px;
+}
+
+//display flex
+.nav-container-2, .icon-container-1, .icon-menu-1, .nav-main-1, .ul-menu-1, .btn-search-1, .icon-container-3, .nav-login-1,
+.btn-login-1, .btn-login-2 {
+    @include flexCenter();
+}
+
+//height, width 100%
+.nav-container-2, .icon-container-2 svg {
+    @include sizeFull();
+}
+
+//padding, margin 0
+.icon-container-3 span {
+    @include zeroSpacing();
+}
